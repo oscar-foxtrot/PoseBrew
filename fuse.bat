@@ -1,24 +1,55 @@
 @echo off
+setlocal enabledelayedexpansion
 
-if "%~1"=="" (
-    echo Usage: %~nx0 file1 file2 [--npy] [--synced]
-    echo Example: %~nx0 video1.mp4 video2.mp4
-    echo          %~nx0 file1.npy file2.npy --npy --synced
-    goto :eof
+REM Check required arguments
+if "%~2"=="" (
+    goto :usage
 )
+
+REM Default flags
+set "npy_mode=0"
+set "synced_flag="
+
+REM Validate arguments
+set "arg1=%~1"
+set "arg2=%~2"
+
+REM Loop over all args and parse flags
+shift
+shift
+:parse_loop
+if "%~1"=="" goto after_args
+if /i "%~1"=="--npy" (
+    set "npy_mode=1"
+) else if /i "%~1"=="--synced" (
+    set "synced_flag=--synced"
+) else (
+    echo Error: Unknown flag "%~1"
+    goto :usage
+)
+shift
+goto parse_loop
+
+:after_args
 
 call conda activate motionbert_env
 
-REM Check third argument. If --npy then two .npy files must be provided. Otherwise provide two videos ("%~1" and "%~2")
-
-if /i "%~3"=="--npy" (
+if "%npy_mode%"=="1" (
     echo Skipping inference
-    python python_files\fuse.py --input_1 "%~1" --input_2 "%~2" %4
+    python python_files\fuse.py --input_1 "%arg1%" --input_2 "%arg2%" %synced_flag%
 ) else (
     echo Performing inference...
-    infer.bat "%~1"
-    infer.bat "%~2"
-    python python_files\fuse.py --input_1 "predictions\%~n1.npy" --input_2 "predictions\%~n2.npy" %4
+    call infer.bat "%arg1%"
+    call infer.bat "%arg2%"
+    python python_files\fuse.py --input_1 "predictions\%~n1.npy" --input_2 "predictions\%~n2.npy" %synced_flag%
 )
 
 call conda deactivate
+exit /b 0
+
+:usage
+echo.
+echo Usage: %~nx0 file1 file2 [--npy] [--synced]
+echo Example: %~nx0 video1.mp4 video2.mp4
+echo          %~nx0 file1.npy file2.npy --npy --synced
+exit /b 1
