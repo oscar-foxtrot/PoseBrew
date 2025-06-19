@@ -88,3 +88,6 @@ D:\User\PoseBrew> animate predictions\file_469_aligned.npy predictions\file_474_
 ```
 Результат: полученная анимация (file_469_aligned_file_474_aligned_aligned_animation.mp4):
 ![Result](https://raw.githubusercontent.com/oscar-foxtrot/pose3d-coursework/main/assets/file_469_aligned_file_474_aligned_aligned_animation.gif)
+
+### Датасет:
+Датасет (11 видео), использованный в работе, можно найти [здесь](https://drive.google.com/drive/u/4/folders/1r1LvgzcUSsAGHxaXMExGOCglrXlOL6oI).
