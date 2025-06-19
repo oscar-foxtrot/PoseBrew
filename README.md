@@ -10,4 +10,7 @@
 Инструмент разработан под ОС Windows. <br>
 Для использования требуется наличие: [python](https://www.python.org/downloads/), [git](https://git-scm.com/downloads), [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
-Работа была проверена на 
+Работа была протестирована на системе:
+- ОС: Windows 11 x64
+- CPU: AMD Ryzen 5 7535HS with Radeon Graphics @ 3.30 GHz
+- GPU: отсутствует (используется CPU-only режим для совместимости с системами без CUDA)
