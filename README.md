@@ -30,4 +30,20 @@ setup
 ```
 
 ### Оценка позы <br>
-Получить анимации и 3D точки по видео 
+##### Получить анимации и 3D точки по видео: <br>
+```
+infer filename.mp4
+```
+
+В процессе генерируются следующие файлы и папки:
+- mmpose_output\output_filename (2D точки)
+- boxmot_output\filename.mp4 (анимация трекинга)
+- motionbert_output\filename_0 (3D точки и анимации до ансамблирования, без сдвига)
+- motionbert_output\filename_1 (3D точки и анимации до ансамблирования, сдвиг на 1 шаг)
+- motionbert_output\filename_2 (3D точки и анимации до ансамблирования, сдвиг на 2 шага)
+
+Итоговый результат:
+- animations\filename_monocular_animation.mp4 (анимация 3D точек на выходе)
+- predictions\filename.npy (3D точки на выходе)
+
+
