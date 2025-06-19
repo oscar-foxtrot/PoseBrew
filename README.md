@@ -1,2 +1,5 @@
 # PoseBrew
-Инструмент для оценки трехмерной позы
+
+- [English](README_en.md)  
+- [Русский](README.md)
+
