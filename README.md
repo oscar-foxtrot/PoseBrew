@@ -22,6 +22,7 @@
 git clone https://github.com/oscar-foxtrot/PoseBrew
 cd PoseBrew
 ```
+Следующая команда проведет автоматическую установку библиотек (ожидаемое время ~20-30 минут)
 ```
 setup
 ```
