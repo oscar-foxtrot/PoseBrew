@@ -82,24 +82,24 @@ animate file1.npy [file2.npy]
 This generates:
 
 * animations\file1\_monocular\_animation.npy (3D pose animation for a single file)
-* animations\file1\_file2\_aligned\_animation.npy (animation of two poses together if two files provided)
+* animations\file1\_file2\_aligned\_animation.npy (Animation of two poses in one chart if two files are provided)
 
 ### Example usage:
 
-Put the directory `neurologist` with videos `file_469.mp4` and `file_474.mp4` into PoseBrew. This video pair is recorded in multiview configuration, without synchronization. <br> <br>
-Predict pose for the first video:
+The `neurologist` directory containing the videos `file_469.mp4` and `file_474.mp4` is placed into the PoseBrew folder. This video pair is recorded in multiview configuration, without sync. <br> <br>
+Predict the pose for the first video:
 
 ```
 D:\User\PoseBrew> infer neurologist\file_469.mp4
 ```
 
-Predict pose for the second video:
+Predict the pose for the second video:
 
 ```
 D:\User\PoseBrew> infer neurologist\file_474.mp4
 ```
 
-Get automatically time-synchronized and spatially best-aligned points:
+Get automatically time-synced and spatially aligned points:
 
 ```
 D:\User\PoseBrew> fuse predictions\file_469.npy predictions\file_474.npy --npy
@@ -120,8 +120,4 @@ The dataset (11 videos) used in this work can be found [here](https://drive.goog
 
 ### Results:
 
-Results of processing all 11 videos (including all intermediate steps) can be found [here](https://drive.google.com/drive/folders/1DfhZYNLys-Ts5_5sNaspMypEJd_I7sgN?usp=drive_link).
-
----
-
-Если нужно, могу помочь и с формулировками, или адаптировать под более формальный стиль.
+The results of processing all the 11 videos (including all the intermediate steps) can be found [here](https://drive.google.com/drive/folders/1DfhZYNLys-Ts5_5sNaspMypEJd_I7sgN?usp=drive_link).
