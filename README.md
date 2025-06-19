@@ -21,3 +21,7 @@
 ```
 git clone https://github.com/oscar-foxtrot/PoseBrew
 cd PoseBrew
+```
+```
+setup
+```
