@@ -1,5 +1,5 @@
 # PoseBrew
 
 - [English](README_en.md)  
-- [Русский](README.md)
+- [English] (выбран)
 
