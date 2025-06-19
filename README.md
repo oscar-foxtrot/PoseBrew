@@ -69,7 +69,22 @@ animate file1.npy [file2.npy]
 - animations\file1_file2_aligned_animation.npy (анимация сразу двух поз на одном графике, если в командной строке указано 2 файла)
 
 ### Пример работы:
-В папку PoseBrew поместили директорию neurologist, содержащую видео: file_469.mp4 и file_474.mp4. Эта пара видео записана в мультикамерной конфигурации, синхронизация отсутствует.
+В папку PoseBrew поместили директорию neurologist, содержащую видео: file_469.mp4 и file_474.mp4. Эта пара видео записана в мультикамерной конфигурации, синхронизация отсутствует. <br> <br>
+Сделать предсказание по первому видео:
 ```
-D:\User\PoseBrew> infer neurologist\file_
+D:\User\PoseBrew> infer neurologist\file_469.mp4
 ```
+Сделать предсказание по второму видео:
+```
+D:\User\PoseBrew> infer neurologist\file_474.mp4
+```
+Получить точки, автоматически синхронизированные во времени, а также наложенные наилучшим образом в пространстве:
+```
+D:\User\PoseBrew> fuse predictions\file_469.npy predictions\file_474.npy --npy
+```
+Анимировать полученное наложение:
+```
+D:\User\PoseBrew> animate predictions\file_469_aligned.npy predictions\file_474_aligned.npy
+```
+Результат: полученная анимация (file_469_aligned_file_474_aligned_aligned_animation.mp4):
+![Result](https://raw.githubusercontent.com/oscar-foxtrot/pose3d-coursework/main/assets/file_469_aligned_file_474_aligned_aligned_animation.gif)
