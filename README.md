@@ -91,3 +91,6 @@ D:\User\PoseBrew> animate predictions\file_469_aligned.npy predictions\file_474_
 
 ### Датасет:
 Датасет (11 видео), использованный в работе, можно найти [здесь](https://drive.google.com/drive/u/4/folders/1r1LvgzcUSsAGHxaXMExGOCglrXlOL6oI).
+
+### Результаты:
+Результаты обработки всех 11 видео из датасета (включая все промежуточные этапы) можно найти [здесь](https://drive.google.com/drive/folders/1DfhZYNLys-Ts5_5sNaspMypEJd_I7sgN?usp=drive_link).
