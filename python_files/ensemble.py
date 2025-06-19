@@ -28,9 +28,9 @@ fig = plt.figure(figsize=(8, 8))
 ax = fig.add_subplot(111, projection='3d')
 
 # Set up labels, limits, and titles
-ax.set_xlabel('X')
-ax.set_ylabel('Y')
-ax.set_zlabel('Z')
+ax.set_xlabel('Z')
+ax.set_ylabel('X')
+ax.set_zlabel('Y')
 
 h36m_pts = [(3,2), (2,1), (1, 0), (0, 4), (4, 5), (5, 6), \
     (13, 12), (12, 11), (11, 8), (8, 14), (14, 15), (15, 16), \
@@ -80,6 +80,16 @@ ax.set_xlim([-2, 2])
 ax.set_ylim([-2, 2])
 ax.set_zlim([-2, 2])
 
+xticks = ax.get_xticks()
+xlabels = [f"{-tick:.1f}" for tick in xticks]
+ax.set_xticklabels(xlabels)
+
+zticks = ax.get_zticks()
+# Create labels as the negative of tick positions, formatted nicely
+zlabels = [f"{-tick:.1f}" for tick in zticks]
+# Set these labels on the x-axis
+ax.set_zticklabels(zlabels)
+
 #keypoints_3d = np.load('preds/file_469_dynamic.npy', allow_pickle=True)[:]
 #keypoints_3d_0 = np.load('aligned_469.npy', allow_pickle=True)[40: -40]
 
@@ -119,5 +129,5 @@ np.save(f'predictions/{base_name}.npy', np.array(keypoints_3d, dtype=object))
 
 # Save the animation
 ani = FuncAnimation(fig, update, frames=range(keypoints_3d.shape[0]), interval=8.33, blit=False)
-ani.save(f"animations/{base_name}_monocular_animation.gif", writer="Pillow", fps=30)
+ani.save(f"animations/{base_name}_monocular_animation.mp4", writer="ffmpeg", fps=30)
 
