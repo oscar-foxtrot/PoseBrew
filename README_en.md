@@ -1,4 +1,4 @@
 # PoseBrew
 
 - English (chosen)  
-- [Русский](README.md)
+- [Переключить на русский](README.md)
