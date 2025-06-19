@@ -69,3 +69,7 @@ animate file1.npy [file2.npy]
 - animations\file1_file2_aligned_animation.npy (анимация сразу двух поз на одном графике, если в командной строке указано 2 файла)
 
 ### Пример работы:
+В папку PoseBrew поместили директорию neurologist, содержащую видео: file_469.mp4 и file_474.mp4. Эта пара видео записана в мультикамерной конфигурации, синхронизация отсутствует.
+```
+D:\User\PoseBrew> infer neurologist\file_
+```
