@@ -5,7 +5,7 @@
 
 ## Coursework, MSU Faculty of Computational Mathematics and Cybernetics (CMC MSU) (2025) <br>
 
-In this work, an end-to-end tool was developed to estimate relative 3D human pose using arbitrary (in-the-wild) .mp4 videos. The theoretical description can be found in the [coursework text]().
+In this work, an end-to-end tool was developed to estimate relative 3D human pose using arbitrary (in-the-wild) .mp4 videos. The theoretical description can be found in the [coursework text (Russian-only version)]().
 
 #### Technical Requirements
 
