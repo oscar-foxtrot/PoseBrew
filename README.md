@@ -8,4 +8,4 @@
 
 #### Технические требования
 Инструмент разработан под ОС Windows. <br>
-Для использования требуется наличие: [git](https://git-scm.com/downloads), [Python](https://www.python.org/downloads/), [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
+Для использования требуется наличие: [Python](https://www.python.org/downloads/), [git](https://git-scm.com/downloads), [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
