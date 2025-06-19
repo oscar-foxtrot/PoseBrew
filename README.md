@@ -10,12 +10,6 @@
 Инструмент разработан под ОС Windows. <br>
 Для использования требуется наличие: [python](https://www.python.org/downloads/), [git](https://git-scm.com/downloads), [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
-Работа была протестирована на системе:
-- ОС: Windows 11 x64
-- CPU: AMD Ryzen 5 7535HS
-- GPU: не использовалась (работа производится в CPU-only режиме для совместимости с системами без поддержки CUDA)
-- RAM: 16 GB
-
 ### Инструкция по установке <br>
 Откройте Anaconda Prompt (или терминал с активированным conda).  
 Далее:
@@ -94,3 +88,22 @@ D:\User\PoseBrew> animate predictions\file_469_aligned.npy predictions\file_474_
 
 ### Результаты:
 Результаты обработки всех 11 видео из датасета (включая все промежуточные этапы) можно найти [здесь](https://drive.google.com/drive/folders/1DfhZYNLys-Ts5_5sNaspMypEJd_I7sgN?usp=drive_link).
+
+### Примечания:
+Работа была протестирована на двух системах: <br>
+1:
+- ОС: Windows 11 x64
+- CPU: AMD Ryzen 5 7535HS
+- GPU: не использовалась (работа производится в CPU-only режиме для совместимости с системами без поддержки CUDA)
+- RAM: 16 GB
+- conda 24.9.2
+
+2:
+- ОС: Windows 10 x64
+- CPU: Intel Core i5-7400
+- GPU: не использовалась (работа производится в CPU-only режиме для совместимости с системами без поддержки CUDA)
+- RAM: 8 GB
+- conda 24.11.3
+
+<br>
+Предсказание позы на всех 11 видео из датасета может занять 4-5 часов.
