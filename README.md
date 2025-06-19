@@ -68,4 +68,4 @@ animate file1.npy [file2.npy]
 - animations\file1_monocular_animation.npy (анимация трехмерной позы, если в командной строке передан путь к одному файлу)
 - animations\file1_file2_aligned_animation.npy (анимация сразу двух поз на одном графике, если в командной строке указано 2 файла)
 
-#### Пример:
+### Пример работы:
