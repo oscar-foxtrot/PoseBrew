@@ -2,11 +2,10 @@
 
 - English (chosen)  
 - [Переключить на русский](README.md)
-Вот перевод твоего README на английский, сохранил стиль и форматирование:
 
-## Coursework, MSU Faculty of Computational Mathematics and Cybernetics (2025) <br>
+## Coursework, MSU Faculty of Computational Mathematics and Cybernetics (CMC MSU) (2025) <br>
 
-During this work, an end-to-end tool was developed to estimate relative 3D human pose from arbitrary (in-the-wild) .mp4 videos. The theoretical description can be found in the [coursework text]().
+In this work an end-to-end tool was developed to estimate relative 3D human pose using arbitrary (in-the-wild) .mp4 videos. The theoretical description can be found in the [coursework text]().
 
 #### Technical Requirements
 
@@ -17,10 +16,10 @@ Tested system configuration:
 
 * OS: Windows 11 x64
 * CPU: AMD Ryzen 5 7535HS
-* GPU: not used (CPU-only mode for compatibility with systems without CUDA support)
+* GPU: not used (the tool works in CPU-only mode for compatibility with systems without CUDA support)
 * RAM: 16 GB
 
-### Installation Instructions <br>
+### Installation <br>
 
 Open Anaconda Prompt (or terminal with conda activated).
 Then run:
@@ -30,7 +29,7 @@ git clone https://github.com/oscar-foxtrot/PoseBrew
 cd PoseBrew
 ```
 
-The next command will automatically install dependencies and configure the environment <br>
+The next command will automatically install the dependencies and configure the environment <br>
 (estimated time \~20-30 minutes, disk space \~9 GB):
 
 ```
@@ -55,24 +54,24 @@ This generates the following files and folders:
 
 Final results:
 
-* animations\filename\_monocular\_animation.mp4 (output 3D keypoints animation)
-* predictions\filename.npy (output 3D keypoints)
+* animations\filename\_monocular\_animation.mp4 (resulting 3D keypoints animation)
+* predictions\filename.npy (resulting 3D keypoints)
 
-##### Predictions for multiview configuration:
+##### Prediction for multiview configuration:
 
 ```
 infer file1 file2 [--npy] [--synced]
 ```
 
-If file1 and file2 are .npy files obtained using **infer file1.mp4** and **infer file2.mp4**, no prediction is performed — only 3D keypoints fusion. In this case, use the flag **--npy**. <br>
-If file1 and file2 are .mp4 files, prediction is done on both files first, then fusion. Then omit the **--npy** flag. <br>
-If file1 and file2 are synchronized-in-time .mp4 or .npy files, specify the flag **--synced**. Automatic synchronization will not be done then.
+If file1 and file2 are .npy files obtained using **infer file1.mp4** and **infer file2.mp4**, no prediction is performed — only the fusion. In this case, use the flag **--npy**. <br>
+If file1 and file2 are .mp4 files, prediction is performed on both files first, then the fusion. Then omit the **--npy** flag. <br>
+If file1 and file2 are synchronized-in-time .mp4 or .npy files, specify the **--synced** flag. Automatic synchronization will not be done then.
 
 This generates the following files and folders:
 
-* predictions\file1\_aligned.npy (3D pose points from file1 aligned to file2)
-* predictions\file2\_aligned.npy (3D pose points from file2 aligned to file1)
-* predictions\file1\_file2\_fused.npy (3D points fused from poses in files 1 and 2)
+* predictions\file1\_aligned.npy (3D pose points from file1 aligned with the points from file2)
+* predictions\file2\_aligned.npy (3D pose points from file2 aligned with the points from file1)
+* predictions\file1\_file2\_fused.npy (3D points fused from the poses in files file1 and file2)
 
 ##### Animate points:
 
