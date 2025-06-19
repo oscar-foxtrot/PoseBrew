@@ -30,7 +30,7 @@ setup
 ```
 
 ### Оценка позы <br>
-##### Получить анимации и 3D точки по одному видео: <br>
+##### Получить анимации и 3D точки по одному видео:
 ```
 infer filename.mp4
 ```
@@ -46,7 +46,7 @@ infer filename.mp4
 - animations\filename_monocular_animation.mp4 (анимация 3D точек на выходе)
 - predictions\filename.npy (3D точки на выходе)
 
-##### Предсказания в мультикамерной конфигурации: <br>
+##### Предсказания в мультикамерной конфигурации:
 ```
 infer file1 file2 [--npy] [--synced]
 ```
@@ -60,4 +60,10 @@ infer file1 file2 [--npy] [--synced]
 - predictions\file2_aligned.npy (3D точки позы из файла 2, наложенные на точки позы из файла 1)
 - predictions\file1_file2_fused.npy (3D точки, полученные слиянием поз из файлов 1 и 2)
 
-
+##### Анимировать точки:
+```
+animate file1.npy [file2.npy]
+```
+В процессе генерируются следующие файлы и папки:
+- animations\file1_monocular_animation.npy (анимация трехмерной позы, если в командной строке передан путь к одному файлу)
+- animations\file1_file2_aligned_animation.npy (анимация сразу двух поз на одном графике, если в командной строке указано 2 файла)
