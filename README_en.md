@@ -12,13 +12,6 @@ In this work, an end-to-end tool was developed to estimate relative 3D human pos
 The tool is developed for Windows OS. <br>
 Required software: [python](https://www.python.org/downloads/), [git](https://git-scm.com/downloads), [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
-Tested system configuration:
-
-* OS: Windows 11 x64
-* CPU: AMD Ryzen 5 7535HS
-* GPU: not used (the tool works in CPU-only mode for compatibility with systems without CUDA support)
-* RAM: 16 GB
-
 ### Installation <br>
 
 Open Anaconda Prompt (or terminal with conda activated).
@@ -121,3 +114,22 @@ The dataset (11 videos) used in this work can be found [here](https://drive.goog
 ### Results:
 
 The results of processing all the 11 videos (including all the intermediate steps) can be found [here](https://drive.google.com/drive/folders/1DfhZYNLys-Ts5_5sNaspMypEJd_I7sgN?usp=drive_link).
+
+### Additional notes:
+The tool was tested on two systems: <br>
+1:
+- ОС: Windows 11 x64
+- CPU: AMD Ryzen 5 7535HS
+- GPU: not used (the execution is performed in CPU-only mode to ensure compatibility with systems without CUDA support)
+- RAM: 16 GB
+- conda 24.9.2
+
+2:
+- ОС: Windows 10 x64
+- CPU: Intel Core i5-7400
+- GPU: not used (the execution is performed in CPU-only mode to ensure compatibility with systems without CUDA support)
+- RAM: 8 GB
+- conda 24.11.3
+
+<br>
+Pose prediction on all the 11 videos from the dataset may take up to 4-5 hours.
