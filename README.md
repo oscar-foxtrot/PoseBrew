@@ -12,5 +12,5 @@
 
 Работа была протестирована на системе:
 - ОС: Windows 11 x64
-- CPU: AMD Ryzen 5 7535HS with Radeon Graphics @ 3.30 GHz
+- CPU: AMD Ryzen 5 7535HS
 - GPU: отсутствует (используется CPU-only режим для совместимости с системами без CUDA)
