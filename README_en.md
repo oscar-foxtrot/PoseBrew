@@ -105,7 +105,7 @@ D:\User\PoseBrew> animate predictions\file_469_aligned.npy predictions\file_474_
 ```
 
 Result: the resulting animation (`file_469_aligned_file_474_aligned_aligned_animation.mp4`):
-![Result](https://raw.githubusercontent.com/oscar-foxtrot/pose3d-coursework/main/assets/file_469_aligned_file_474_aligned_aligned_animation.gif)
+![Result](https://raw.githubusercontent.com/oscar-foxtrot/posebrew-pose3d-coursework/main/assets/file_469_aligned_file_474_aligned_aligned_animation.gif)
 
 ### Dataset:
 
